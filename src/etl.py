@@ -36,6 +36,7 @@ def get_data(outdir):
 
     X_test = np.load('test/testdata/x_sample.npy')
     Y_test = np.load('test/testdata/y_sample.npy')
+    print("success in etl")
     return (X_test, Y_test)
 
 

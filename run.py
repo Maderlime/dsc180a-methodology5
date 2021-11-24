@@ -31,6 +31,13 @@ def main(targets):
         # make the data target
         data = get_data(**data_cfg)
 
+    if 'test' in targets:
+        with open('config/data-params.json') as fh:
+            data_cfg = json.load(fh)
+        print("success in test")
+        # make the data target
+        data = get_data(**data_cfg)
+
     # if 'features' in targets:
     #     with open('config/features-params.json') as fh:
     #         feats_cfg = json.load(fh)
